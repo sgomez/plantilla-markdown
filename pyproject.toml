@@ -1,0 +1,15 @@
+[project]
+name = "plantilla-markdown"
+version = "0.1.0"
+description = "Plantilla para crear webs con mkdocs, mkdocs-material y markdown"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "markdown>=3.7,<4",
+    "mkdocs>=1.6.1,<2",
+    "mkdocs-git-revision-date-localized-plugin>=1.3.0,<2",
+    "mkdocs-material>=9.5.50,<10",
+    "mkdocs-material-extensions>=1.3.1,<2",
+    "mkdocs-pandoc>=0.2.6,<1",
+    "pymdown-extensions>=10.14.1,<11",
+]
