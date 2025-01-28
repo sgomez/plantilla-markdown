@@ -2,7 +2,10 @@ name: Build documentation
 
 on:
   push:
-    branches: [main]
+    branches: [master, main]
+
+permissions:
+  contents: write
 
 jobs:
   # Build and deploy documentation site
@@ -11,6 +14,8 @@ jobs:
     steps:
       - name: Checkout source form GitHub
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
