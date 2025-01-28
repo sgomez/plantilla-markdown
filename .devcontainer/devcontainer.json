@@ -41,7 +41,8 @@
           },
           "editor.formatOnSave": true,
           "editor.fontLigatures": false,
-          "remote.autoForwardPorts": false
+          "remote.autoForwardPorts": false,
+          "git.postCommitCommand": "push"
         }
       }
     }
