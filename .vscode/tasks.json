@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "mkdocs:start",
+        "type": "shell",
+        "command": "uv run mkdocs serve",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "mkdocs:send",
+        "type": "shell",
+        "command": "git add mkdocs.yml docs && git commit -m \"Update MkDocs $(date +'%Y-%m-%d %H:%M:%S')\" && GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' git push",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      }
+    ]
+  }
+  
